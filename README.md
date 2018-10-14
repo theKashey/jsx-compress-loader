@@ -33,6 +33,10 @@ Just add this webpack loader AFTER all other.
 - after svg -> react -> babel -> js
 - and dont forget to apply it to node_modules as well.
 
+### Only for ESM modules!
+babel "modules" should be "false" - you already should have it, for proper tree-shaking, and 
+this is what this library is counting on. 
+
 ### As separate loader
 ```js
 rules: [
