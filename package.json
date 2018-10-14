@@ -1,10 +1,9 @@
 {
   "name": "jsx-compress-loader",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "description": "JSX optimization loader",
   "main": "src/index.js",
-  "scripts": {
-  },
+  "scripts": {},
   "author": "theKashey <thekashey@gmail.com>",
   "license": "MIT",
   "bugs": {
