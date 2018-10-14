@@ -1,6 +1,6 @@
 {
   "name": "jsx-compress-loader",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "JSX optimization loader",
   "main": "src/index.js",
   "scripts": {},
