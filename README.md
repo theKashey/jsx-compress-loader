@@ -32,7 +32,7 @@ Just add this webpack loader AFTER all other.
 - after js
 - after svg -> react -> babel -> js
 - and dont forget to apply it to node_modules as well.
-> in terms of webpack configuratiob - "after" goes "before", ie top-most loader is the last one.
+> in terms of webpack configuration - "after" goes "before", ie top-most loader is the "last" one.
 
 ### Only for ESM modules!
 babel "modules" should be "false" - you already should have it, for proper tree-shaking, and 
@@ -42,7 +42,7 @@ this is what this library is counting on.
 ```js
 rules: [
   {
-    test: /\.js$/,
+    test: /\.js$/, // for any js file in your project
     use: 'jsx-compress-loader',
   },
   {
@@ -57,7 +57,7 @@ rules: [
 ```js
 rules: [
   {
-    test: /\.js$/,
+    test: /\.js$/, // paired with babel loader
     exclude: /node_modules/,
     use: [    
       'jsx-compress-loader'
