@@ -11,7 +11,7 @@ from __17__ to __1__, as long local variable would be _uglified_.
 That is not a problem for Preact or Inferno, only to "default" React, as long only React has got "long element creation".
 See [this Dan's twitt](https://twitter.com/dan_abramov/status/841266032576724992), to find more about it.
 
-This technique also is almost NOT affecting gzipped size, only the _react_ amount of js code, browser has to parse.
+This technique also is almost NOT affecting gzipped size, only the _real_ amount of js code, browser has to parse.
 
 ### Bonus 
 
@@ -32,6 +32,7 @@ Just add this webpack loader AFTER all other.
 - after js
 - after svg -> react -> babel -> js
 - and dont forget to apply it to node_modules as well.
+> in terms of webpack configuratiob - "after" goes "before", ie top-most loader is the last one.
 
 ### Only for ESM modules!
 babel "modules" should be "false" - you already should have it, for proper tree-shaking, and 
