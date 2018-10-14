@@ -9,7 +9,7 @@ from __17__ to __1__, as long local variable would be _uglified_.
 > "a.b.createElement".length === 17, "React.default.createElement".length === 27. Usually - about 23
 
 That is not a problem for Preact or Inferno, only to "default" React, as long only React has got "long element creation".
-See [this Dan's twitt](https://twitter.com/dan_abramov/status/841266032576724992), to find more about it.
+See [this tweet from Dan Abramov](https://twitter.com/dan_abramov/status/841266032576724992), to find more about it.
 
 This technique also is almost NOT affecting gzipped size, only the _real_ amount of js code, browser has to parse.
 
@@ -17,9 +17,9 @@ This technique also is almost NOT affecting gzipped size, only the _real_ amount
 
 This also removes object property access (ie React.createElement), thus:
 - speeding up `Chrome` by 5%
-- speeding up `Safary 11` by 15%
-- speeding up `Safary 12` by 35%
-- not speeding up Mobile Safary 12(iPhone XS)
+- speeding up `Safari 11` by 15%
+- speeding up `Safari 12` by 35%
+- not speeding up Mobile Safari 12(iPhone XS)
 - here is [the test](https://jsperf.com/single-dot-property-access/1)
 
 # Would it help?
