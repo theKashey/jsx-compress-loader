@@ -28,6 +28,7 @@ function transform(source, map) {
     const result = node.toStringWithSourceMap();
     return this.callback(null, result.code, result.map.toString());
   }
+  return this.callback(null, source, map);
 }
 
 module.exports = transform;

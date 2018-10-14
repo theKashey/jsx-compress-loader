@@ -8,6 +8,13 @@ Replaces `React.createElement` by a local variable, thus __reduce__ "number of c
 from __17__ to __1__, as long local variable would be _uglified_.
 > "a.b.createElement".length === 17, "React.default.createElement".length === 27. Usually - about 23
 
+That is not a problem for Preact or Inferno, only to "default" React, as long only React has got "long element creation".
+See [this Dan's twitt](https://twitter.com/dan_abramov/status/841266032576724992), to find more about it.
+
+This technique also is almost NOT affecting gzipped size, only the _react_ amount of js code, browser has to parse.
+
+### Bonus 
+
 This also removes object property access (ie React.createElement), thus:
 - speeding up `Chrome` by 5%
 - speeding up `Safary 11` by 15%
