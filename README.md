@@ -73,6 +73,7 @@ rules: [
 would inline "createElement", achieving almost the same result
 - [babel-plugin-transform-react-jsx](https://babeljs.io/docs/en/babel-plugin-transform-react-jsx)
 has a `pragma jsx`, letting you to change JSX compilation rules. Preact, for example, configure it to produce just `h`.
+- [pragma jsx + webpack conf](https://medium.com/@jilizart/reduce-the-size-of-final-jsx-code-c39effca906f) - the same, but webpack plugin will inject right imports.
 - [babel-plugin-transform-react-constant-elements](https://babeljs.io/docs/en/babel-plugin-transform-react-constant-elements)
 would hoist Elements creating, thus removes _object property access_, as long it would be called
 only once. Plus - would remove GC pressure due to the same "one time" element creation.
