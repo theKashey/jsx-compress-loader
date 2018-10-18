@@ -76,6 +76,7 @@ has a `pragma jsx`, letting you to change JSX compilation rules. Preact, for exa
 - [babel-plugin-transform-react-constant-elements](https://babeljs.io/docs/en/babel-plugin-transform-react-constant-elements)
 would hoist Elements creating, thus removes _object property access_, as long it would be called
 only once. Plus - would remove GC pressure due to the same "one time" element creation.
+- [react-local](https://github.com/philosaf/react-local) - is doing absolutely the same, but as a babel plugin. Requires more work for proper instalation.
 
 # Licence
 MIT
