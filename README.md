@@ -78,6 +78,7 @@ has a `pragma jsx`, letting you to change JSX compilation rules. Preact, for exa
 would hoist Elements creating, thus removes _object property access_, as long it would be called
 only once. Plus - would remove GC pressure due to the same "one time" element creation.
 - [react-local](https://github.com/philosaf/react-local) - is doing absolutely the same, but as a babel plugin. Requires more work for proper instalation.
+- [runtime-compress-loader](https://github.com/theKashey/runtime-compress-loader) - compress all inlined babel helpers. The same action, but for js sugar.
 
 # Licence
 MIT
