@@ -6,7 +6,11 @@ JSX optimization webpack loader
 
 Replaces `React.createElement` by a local variable, thus __reduce__ "number of characters" per React Element
 from __17__ to __1__, as long local variable would be _uglified_.
-> "a.b.createElement".length === 17, "React.default.createElement".length === 27. Usually - about 23
+
+- "a.b.createElement".length === 17, 
+- "React.default.createElement".length === 27. 
+- usually - about 23 after all optimizations and transplications.
+- this solution - __1__
 
 That is not a problem for Preact or Inferno, only to "default" React, as long only React has got "long element creation".
 See [this tweet from Dan Abramov](https://twitter.com/dan_abramov/status/841266032576724992), to find more about it.
